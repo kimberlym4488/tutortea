@@ -18,8 +18,6 @@ body {
   background-size: 10rem;
   background-repeat: repeat;
   background-position: center;
-
-
 }
 
 a {
@@ -44,15 +42,20 @@ a {
   background: #28302fdc;
   color: var(--textPrimary);
 }
-
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 6rem; /* Footer height */
+}
 #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem; /* Footer height */
   background-color: var(--primary);
   color: var(--textPrimary);
-  width: 100vw;
-  position:absolute;
-  bottom:0;
-  width:100%;
-
 }
 
 #test {
@@ -66,7 +69,6 @@ a {
 #smallScreenLinks {
   display: none;
 }
-
 
 /* CARDS */
 .card {
@@ -116,14 +118,14 @@ a {
 .submit-review,
 .signup-form1,
 .review-list {
-  background-color: var(--secondary) !important;
-  opacity: 0.8;
+  background-color: #5e877f !important;
+  opacity: 1;
   color: var(--textPrimary);
 }
 
 .review-list {
-  background-color: var(--quat) !important;
-  opacity: 0.8;
+  background-color: #5e877f !important;
+  opacity: 1;
   color: var(--textPrimary);
 }
 
@@ -138,13 +140,19 @@ a {
   justify-content: center !important;
 }
 
-.submitBtn {
-  text-decoration: none;
-}
-.submitBtn:hover {
-  background-color: #cecece;
+.submitBtn,
+.formSubmit:hover {
+  background-color: #5e877f;
+  color: var(--textPrimary) !important;
   text-decoration: none;
   font-weight: bold;
+}
+
+.submitBtn,
+.formSubmit {
+  text-decoration: none;
+  background-color: white;
+  color: #5e877f;
 }
 
 .logout-page {
@@ -190,7 +198,9 @@ tbody tr:hover {
 
 @media only screen and (max-width: 1024px) {
   #footer {
+    position: relative !important;
     flex-direction: column !important;
+    height: fit-content;
   }
   #footer .quotes {
     width: 50%;
@@ -204,6 +214,7 @@ tbody tr:hover {
   #footer {
     position: relative !important;
     margin: 0 !important;
+    height: fit-content;
     flex-direction: column !important;
   }
   #footer footer {

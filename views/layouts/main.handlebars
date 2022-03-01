@@ -21,9 +21,10 @@
   </head>
 
   <body>
+  <div id="page-container">
+   <div id="content-wrap">
+
     <header>
-
-
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-md navbar-dark" id="nav">
         <div class="container-fluid">
@@ -150,6 +151,7 @@
             </li>
 
             <div>
+              <ul>
               <li class="nav-item ms-3" id="smallScreenLinks">
                   <a class="nav-link" href="/tutorportal">Tutor List</a>
               </li>
@@ -162,12 +164,8 @@
               <li class="nav-item ms-3" id="smallScreenLinks">
                   <a class="nav-link" href="/collab">Collabrewators</a>
               </li> 
-            </div>
-
-
-            </div>          
             </ul> 
-            
+          </div>
 
           </div>
         </div>
@@ -185,6 +183,8 @@
     {{#if toast}}
           {{> toast}}
     {{/if}}
+
+  </div>
     {{! FOOTER }}
       <footer
         id="footer" class="py-3 d-flex justify-content-around align-items-center"
@@ -221,6 +221,7 @@
         </div>
 
       </footer>
+      </div>
 
 
     {{#if loggedIn}}
