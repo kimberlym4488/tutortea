@@ -181,14 +181,13 @@
       {{{body}}}
 
     </main>
-    
 
     {{#if toast}}
           {{> toast}}
     {{/if}}
     {{! FOOTER }}
       <footer
-        id="footer" class="py-3 d-flex justify-content-between align-items-center"
+        id="footer" class="py-3 d-flex justify-content-around align-items-center"
       >
         <div id="footer-co" class="justify-content-start flex-start align-items-center ps-2">
           <p class="my-1">&copy;  <a class="text-light" href="/collab">Collabrewation</a> </p>
@@ -223,9 +222,6 @@
 
       </footer>
 
-    <div id="scrollTop"> ↑ </div>
-
-    {{! SCROLL TOP BUTTON }}
 
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
@@ -240,7 +236,7 @@
    
     <script src="/js/main.js"></script>
 
-</body>
+   </body>
 
 
 </html>
