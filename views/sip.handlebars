@@ -3,22 +3,43 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+{{! tooltip functionality  https://jqueryui.com/tooltip/}}
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script>
+  $( function() { $( document ).tooltip(); } );
+</script>
+<style>
+  label { display: inline-block; width: 5em; }
+</style>
+{{! begin page content }}
 
-<section class="container review-list my-5" style="border-radius:10px">
+<section
+  class="container review-list my-5 table-responsive"
+  style="border-radius:10px"
+>
   <table class="table table-hover">
-    <thead
-      class="table-header"
-      style="white-space: nowrap"
-      data-toggle="tooltip"
-      data-placement="bottom"
-      title="Click to sort"
-    >
-      <tr style="color:white; font-weight:bolder; font-size:1.25rem">
-        <th scope="col" style="width: 19.66%">My Tutors</th>
-        <th scope="col" style="width: 8.33%">Rating</th>
-        <th scope="col" style="width: 60.01%">My Reviews</th>
-        <th scope="col" style="width: 12%">Availability</th>
+    <thead class="table-header">
+
+      <tr style="color:white!important; font-weight:bolder; font-size:1.25rem">
+        <th scope="col" style="width: 19.66%" href="#" title="Click to sort">My
+          Tutors</th>
+        <th
+          scope="col"
+          style="width: 8.33%"
+          href="#"
+          title="Click to sort"
+        >Rating</th>
+        <th scope="col" style="width: 60.01%" href="#" title="Click to sort">My
+          Reviews</th>
+        <th
+          scope="col"
+          style="width: 12%"
+          href="#"
+          title="Click to sort"
+        >Times</th>
       </tr>
+
     </thead>
 
     {{#each myReviews as |myReview|}}
@@ -26,9 +47,8 @@
         class="clickable-link"
         onclick="window.location='/edit/{{myReview.id}}';"
         style="color:white; cursor:pointer"
-        data-toggle="tooltip"
-        data-placement="bottom"
-        title="Click to update or delete"
+        href="#"
+        title="Click to update or delete review"
       >
         <td value="{{myReview.tutor_id}}">
           {{myReview.tutor.name}}
@@ -54,17 +74,28 @@
     {{/each}}
   </table>
   <table class="table table-hover">
-    <thead
-      class="table-header"
-      data-toggle="tooltip"
-      data-placement="bottom"
-      title="Click to sort"
-    >
+    <thead class="table-header">
       <tr style="color:white; font-weight:bolder; font-size:1.25rem">
-        <th scope="col" style="width: 19.66%">All Tutors</th>
-        <th scope="col" style="width: 8.33%">Rating</th>
-        <th scope="col" style="width: 60.01%">Reviews</th>
-        <th scope="col" style="width: 12%">Availability</th>
+        <th scope="col" style="width: 19.66%" href="#" title="Click to sort">All
+          Tutors</th>
+        <th
+          scope="col"
+          style="width: 8.33%"
+          href="#"
+          title="Click to sort"
+        >Rating</th>
+        <th
+          scope="col"
+          style="width: 60.01%"
+          href="#"
+          title="Click to sort"
+        >Reviews</th>
+        <th
+          scope="col"
+          style="width: 12%"
+          href="#"
+          title="Click to sort"
+        >Availability</th>
       </tr>
     </thead>
 
@@ -95,9 +126,4 @@
   </table>
 </section>
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"
-></script>
 <script src="/js/sip.js"></script>

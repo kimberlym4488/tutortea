@@ -1,4 +1,4 @@
-{{!-- Add or view tutors --}}
+{{! Add or view tutors }}
 <link rel="stylesheet" href="/css/tutorPortal.css" />
 
 <main class="container d-flex justify-content-center main-content my-5">
@@ -42,8 +42,21 @@
         <tr
           style="color:white; font-weight:bold; font-size:1.15rem; cursor:pointer"
         >
-          <th scope="col">Name: </th>
-          <th scope="col">Email:</th>
+          <th
+            scope="col"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Click to sort"
+          >
+            Name
+          </th>
+          <th
+            scope="col"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Click to sort"
+          >
+            Email</th>
         </tr>
       </thead>
       <tbody>
@@ -66,5 +79,5 @@
   </div>
 
 </main>
-<script src="js/sip.js"></script>
-<script src="js/tutor-portal.js"></script>
+<script src="/js/sip.js"></script>
+<script src="/js/tutor-portal.js"></script>

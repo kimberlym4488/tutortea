@@ -15,7 +15,7 @@ const submitTutor = async (event) => {
   if (response.ok) {
     document.location.replace(
       "/tutorportal/?toast=" + encodeURI(`Thanks for adding a tutor!`)
-    );
+    ).then(document.location.refresh())
   } else
     document.location.replace(
       "/tutorportal/?toast=" +
